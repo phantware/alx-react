@@ -8,11 +8,9 @@
 
 Create a basic app named dashboard using create-react-app in your task_0 directory
 
-You will need a favicon and the Holberton logo. Download them and add them to the src/ directory under dashboard/
+You will need a favicon and the PhantwareDownload them and add them to the src/ directory under dashboard/
 
-Holberton Logo
-
-Favicon
+PhantwareFavicon
 
 Remove the unused files:
 
@@ -21,9 +19,9 @@ index.css
 App.test.js
 in task_0/dashboard/src/App.js, create a function App that returns:
 
-a header div with a class named App-header containing the Holberton logo and a h1 with the text School dashboard
+a header div with a class named App-header containing the Phantwarend a h1 with the text School dashboard
 a body div with a class named App-body containing at least one paragraph with the text Login to access the full dashboard
-a footer div with a class named App-footer containing at least one paragraph with the text Copyright 2020 - holberton School
+a footer div with a class named App-footer containing at least one paragraph with the text Copyright 2020 - Phantware
 Modify the App.css to make the project looks like the following screenshot:
 
 Requirements:
@@ -40,7 +38,7 @@ Using your code from the previous task, in task_1/dashboard/src/utils.js:
 
 Create a function named getFullYear that will return the current year
 Create a function named getFooterCopy:
-It accepts one argument isIndex(boolean). When true, the function should return Holberton School. When false, the function should return Holberton School main dashboard
+It accepts one argument isIndex(boolean). When true, the function should return Phantware. When false, the function should return Phantware main dashboard
 Modify the footer returned in task_1/dashboard/src/App.js to use these two functions
 in task_1/dashboard/src/Notifications.js, create a Notifications element:
 
