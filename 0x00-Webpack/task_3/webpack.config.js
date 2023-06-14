@@ -45,9 +45,15 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/i,
+      //   use: ['css-loader', 'style-loader'],
+      // },
       {
-        test: /\.css$/i,
-        use: ['css-loader', 'style-loader'],
+        test: /.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpe?g|svg)$/i,

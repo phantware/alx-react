@@ -1,4 +1,5 @@
-import './header.css'
+// import './header.css'
+require('./header.css')
 const $ = require('jquery')
 
 $('body').append('<header></header>')
