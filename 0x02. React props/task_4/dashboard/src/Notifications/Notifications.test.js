@@ -7,7 +7,6 @@ import NotificationItem from './NotificationItem'
 describe('Notification tests', () => {
   it('renders Notification component without crashing', () => {
     const wrapper = shallow(<Notifications />)
-
     expect(wrapper).toBeDefined()
   })
 
@@ -38,7 +37,6 @@ describe('Notification tests', () => {
 
   it('renders correct text', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.contains(<p>Here is the list of notifications</p>)).toBe(
       true
     )
@@ -46,7 +44,6 @@ describe('Notification tests', () => {
 
   it('displays menu item when displayDrawer is false', () => {
     const wrapper = shallow(<Notifications displayDrawer={false} />)
-
     expect(wrapper.find('div.menuItem').exists()).toBe(true)
     expect(wrapper.find('div.menuItem').html()).toEqual(
       '<div class="menuItem"><p>Your notifications</p></div>'
@@ -55,19 +52,16 @@ describe('Notification tests', () => {
 
   it('does not display notifications when displayDrawer is false', () => {
     const wrapper = shallow(<Notifications displayDrawer={false} />)
-
     expect(wrapper.find('div.Notifications').exists()).toBe(false)
   })
 
   it('does not display menuItem when displayDrawer is true', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.find('div.menuItem').exists()).toBe(true)
   })
 
   it('displays Notifications when displayDrawer is true', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.find('div.Notifications').exists()).toBe(true)
   })
 })
