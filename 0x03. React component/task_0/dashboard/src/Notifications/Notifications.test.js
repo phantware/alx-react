@@ -13,7 +13,6 @@ const listNotifications = [
 describe('Notification tests', () => {
   it('renders Notification component without crashing', () => {
     const wrapper = shallow(<Notifications />)
-
     expect(wrapper).toBeDefined()
   })
 
@@ -28,6 +27,7 @@ describe('Notification tests', () => {
     wrapper.find('ul').forEach((node) => {
       expect(node.equals(<NotificationItem />))
     })
+
     expect(wrapper.find('ul').childAt(0).html()).toEqual(
       '<li data-notification-type="default">New course available</li>'
     )
