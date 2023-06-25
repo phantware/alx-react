@@ -12,13 +12,11 @@ const listCourses = [
 describe('CourseList component tests', () => {
   it('should render without crashing', () => {
     const wrapper = shallow(<CourseList />)
-
     expect(wrapper.exists()).toBe(true)
   })
 
   it('renders 5 different rows', () => {
     const wrapper = shallow(<CourseList listCourses={listCourses} />)
-
     expect(wrapper.find('thead').children()).toHaveLength(2)
     wrapper.find('thead').forEach((node) => {
       expect(
