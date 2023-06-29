@@ -37,6 +37,7 @@ describe('onclick event behaves as it should', () => {
   it('should call console.log', () => {
     const wrapper = shallow(<NotificationItem />)
     const spy = jest.fn()
+
     wrapper.setProps({ value: 'test item', markAsRead: spy, id: 1 })
     wrapper.find('li').props().onClick()
     expect(spy).toBeCalledTimes(1)
