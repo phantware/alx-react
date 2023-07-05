@@ -14,7 +14,6 @@ import { AppContext, user } from './AppContext'
 class App extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       displayDrawer: false,
       user: user,
