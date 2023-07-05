@@ -9,7 +9,6 @@ describe('WithLogging tests', () => {
     const spy = jest.spyOn(console, 'log').mockImplementation()
     const NewComponent = WithLogging(TestComponent)
     const wrapper = shallow(<NewComponent />)
-
     expect(spy).toBeCalledTimes(1)
     wrapper.unmount()
     expect(spy).toBeCalledTimes(2)
@@ -20,7 +19,6 @@ describe('WithLogging tests', () => {
     const spy = jest.spyOn(console, 'log').mockImplementation()
     const NewComponent = WithLogging(TestComponent)
     const wrapper = shallow(<NewComponent />)
-
     expect(spy).toBeCalledTimes(1)
     expect(spy).toBeCalledWith('Component TestComponent is mounted')
     wrapper.unmount()
