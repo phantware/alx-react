@@ -21,7 +21,6 @@ const listNotifications = [
 describe('Notification tests', () => {
   it('renders Notification component without crashing', () => {
     const wrapper = shallow(<Notifications />)
-
     expect(wrapper).toBeDefined()
   })
 
