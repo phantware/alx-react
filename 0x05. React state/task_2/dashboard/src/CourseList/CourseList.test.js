@@ -52,7 +52,6 @@ describe('CourseList component tests', () => {
 
   it('renders correctely when passed a list of courses', () => {
     const wrapper = shallow(<CourseList listCourses={listCourses} />)
-
     expect(wrapper.find('tbody').children()).toHaveLength(3)
     expect(wrapper.find('tbody').childAt(0).html()).toEqual(
       '<tr class="normal_y7r86x"><td>ES6</td><td>60</td></tr>'
