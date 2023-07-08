@@ -69,9 +69,6 @@ describe('Notification tests', () => {
   it('displays menu item when displayDrawer is false', () => {
     const wrapper = shallow(<Notifications displayDrawer={false} />)
     expect(wrapper.find('div.menuItem').exists()).toBe(false)
-    // expect(wrapper.find('div.menuItem').html()).toEqual(
-    // 	'<div class="menuItem"><p>Your notifications</p></div>'
-    // );
   })
 
   it('does not display notifications when displayDrawer is false', () => {
@@ -178,7 +175,6 @@ describe('onclick event behaves as it should', () => {
   it('should call console.log', () => {
     const wrapper = shallow(<Notifications />)
     const spy = jest.spyOn(console, 'log').mockImplementation()
-
     wrapper.instance().markAsRead = spy
     wrapper.instance().markAsRead(1)
     expect(wrapper.instance().markAsRead).toBeCalledWith(1)
