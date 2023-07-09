@@ -15,7 +15,6 @@ describe('Footer test', () => {
 
   it('Footer component renders "Copyright ${getFullYear()} - ${getFooterCopy(true)}"', () => {
     const wrapper = mount(<Footer />)
-
     expect(wrapper.find('p').text()).toEqual(
       `Copyright ${getFullYear()} - ${getFooterCopy(false)}`
     )
