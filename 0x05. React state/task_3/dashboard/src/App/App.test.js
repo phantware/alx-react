@@ -22,37 +22,31 @@ afterEach(() => {
 describe('rendering components', () => {
   it('renders App component without crashing', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.exists()).toBe(true)
   })
 
   it('contains Notifications component', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.find(Notifications)).toHaveLength(1)
   })
 
   it('contains Header component', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.contains(<Header />)).toBe(true)
   })
 
   it('contains Login component', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.find(Login)).toHaveLength(1)
   })
 
   it('contains Footer component', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.contains(<Footer />)).toBe(true)
   })
 
   it('checks CourseList is not rendered', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper.contains(<CourseList />)).toBe(false)
   })
 })
@@ -60,7 +54,6 @@ describe('rendering components', () => {
 describe('when isLogged in is true', () => {
   const wrapper = shallow(<App />)
   expect(wrapper.state().user).toEqual(user)
-
   it('checks Login is not rendered', () => {
     expect(wrapper.contains(<Login />)).toBe(false)
   })
