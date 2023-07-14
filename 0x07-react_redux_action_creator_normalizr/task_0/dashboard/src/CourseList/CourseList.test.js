@@ -50,7 +50,7 @@ describe('CourseList component tests', () => {
     )
   })
 
-  it('renders correctely when passed a list of courses', () => {
+  it('renders correctly when passed a list of courses', () => {
     const wrapper = shallow(<CourseList listCourses={listCourses} />)
     expect(wrapper.find('tbody').children()).toHaveLength(3)
     expect(wrapper.find('tbody').childAt(0).html()).toEqual(
