@@ -19,6 +19,7 @@ describe('Header', () => {
     const wrapper = shallow(<Header />)
     expect(wrapper.exists()).toEqual(true)
   })
+
   it('should render a h1', () => {
     const wrapper = shallow(<Header />)
     expect(wrapper.exists('img')).toEqual(true)
@@ -88,7 +89,6 @@ describe('Header', () => {
     )
 
     wrapper.find('a').simulate('click')
-
     expect(spy).toHaveBeenCalled()
     expect(spy).toHaveBeenCalledTimes(1)
     wrapper.unmount()
