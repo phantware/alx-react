@@ -20,7 +20,6 @@ const listCourses = [
 describe('CourseList component tests', () => {
   it('should render without crashing', () => {
     const wrapper = shallow(<CourseList />)
-
     expect(wrapper.exists()).toBe(true)
   })
 
