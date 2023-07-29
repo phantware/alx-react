@@ -9,7 +9,7 @@ export const user = {
 export function logOut() {
   user.isLoggedIn = false
 }
-
+s
 export const AppContext = React.createContext({
   user,
   logOut,
