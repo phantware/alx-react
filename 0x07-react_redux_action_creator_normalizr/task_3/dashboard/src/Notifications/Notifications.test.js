@@ -21,7 +21,6 @@ const listNotifications = [
 describe('Notification tests', () => {
   it('renders Notification component without crashing', () => {
     const wrapper = shallow(<Notifications />)
-
     expect(wrapper).toBeDefined()
   })
 
@@ -62,7 +61,6 @@ describe('Notification tests', () => {
 
   it('renders correct text', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.contains(<p>Here is the list of notifications</p>)).toBe(
       false
     )
@@ -70,7 +68,6 @@ describe('Notification tests', () => {
 
   it('displays menu item when displayDrawer is false', () => {
     const wrapper = shallow(<Notifications displayDrawer={false} />)
-
     expect(wrapper.find('div.menuItem').exists()).toBe(false)
     // expect(wrapper.find('div.menuItem').html()).toEqual(
     // 	'<div class="menuItem"><p>Your notifications</p></div>'
@@ -79,19 +76,16 @@ describe('Notification tests', () => {
 
   it('does not display notifications when displayDrawer is false', () => {
     const wrapper = shallow(<Notifications displayDrawer={false} />)
-
     expect(wrapper.find('div.Notifications').exists()).toBe(false)
   })
 
   it('does not display menuItem when displayDrawer is true', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.find('div.menuItem').exists()).toBe(false)
   })
 
   it('displays Notifications when displayDrawer is true', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />)
-
     expect(wrapper.find('div.Notifications').exists()).toBe(false)
   })
 
@@ -181,7 +175,6 @@ describe('onclick event behaves as it should', () => {
 it('verify that clicking on the menu item calls handleDisplayDrawer', () => {
   const handleDisplayDrawer = jest.fn()
   const handleHideDrawer = jest.fn()
-
   const wrapper = shallow(
     <Notifications
       handleDisplayDrawer={handleDisplayDrawer}
