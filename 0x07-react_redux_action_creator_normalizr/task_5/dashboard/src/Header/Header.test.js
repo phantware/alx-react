@@ -80,7 +80,6 @@ describe('Header', () => {
     }
 
     const spy = jest.spyOn(context, 'logOut')
-
     const wrapper = mount(
       <AppContext.Provider value={context}>
         <Header />
@@ -88,7 +87,6 @@ describe('Header', () => {
     )
 
     wrapper.find('a').simulate('click')
-
     expect(spy).toHaveBeenCalled()
     expect(spy).toHaveBeenCalledTimes(1)
     wrapper.unmount()
