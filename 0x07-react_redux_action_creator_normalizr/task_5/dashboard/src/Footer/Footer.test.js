@@ -15,7 +15,6 @@ describe('Footer test', () => {
 
   it('Footer component renders "Copyright ${getFullYear()} - ${getFooterCopy(true)}"', () => {
     const wrapper = mount(<Footer />)
-
     expect(wrapper.find('p').text()).toEqual(
       `Copyright ${getFullYear()} - ${getFooterCopy(false)}`
     )
@@ -39,7 +38,6 @@ describe('Footer test', () => {
     expect(wrapper.find('a').length).toBe(0)
     expect(wrapper.find('a').exists()).toBe(false)
     expect(wrapper.text()).not.toContain('Contact us')
-
     wrapper.unmount()
   })
 
@@ -61,7 +59,6 @@ describe('Footer test', () => {
     expect(wrapper.find('a').length).toBe(1)
     expect(wrapper.find('a').exists()).toBe(true)
     expect(wrapper.text()).toContain('Contact us')
-
     wrapper.unmount()
   })
 })
