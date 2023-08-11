@@ -13,11 +13,9 @@ export function login(email, password) {
 }
 
 export const logout = () => ({ type: LOGOUT })
-
 export const displayNotificationDrawer = () => ({
   type: DISPLAY_NOTIFICATION_DRAWER
 })
-
 export const hideNotificationDrawer = () => ({
   type: HIDE_NOTIFICATION_DRAWER
 })
