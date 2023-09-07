@@ -21,7 +21,6 @@ describe('Test for Notifications.js', () => {
     const userId = '5debd764a7c57c7839d722e9'
 
     getAllNotificationsByUser(userId)
-
     expect(getAllNotificationsByUser(userId)).toEqual(
       expect.arrayContaining(result)
     )
